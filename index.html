@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Social Media Cards</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .card {
+      width: 250px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+    }
+
+    .title {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .text {
+      margin-bottom: 10px;
+    }
+
+    .button {
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .card.instagram {
+      background-color: #ff0084;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="data:image/png;base64,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" alt="Twitter Logo" class="icon">
+      <h2 class="title">TWITTER</h2>
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita ullam aliquid non eligendi, nemo est neque reiciendis error?</p>
+      <button class="button">READ MORE</button>
+    </div>
+    <div class="card instagram">
+      <img src="https://t4.ftcdn.net/jpg/05/12/56/61/360_F_512566120_BAMGElVHqQfK7ggkxbDePJHRN1ZueKQe.jpg" alt="Instagram Logo" class="icon">
+      <h2 class="title">INSTAGRAM</h2>
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita ullam aliquid non eligendi, nemo est neque reiciendis error?</p>
+      <button class="button">READ MORE</button>
+    </div>
+    <div class="card">
+      <img src="https://www.pngitem.com/pimgs/m/250-2500239_black-youtube-play-button-hd-png-download.png" alt="YouTube Logo" class="icon">
+      <h2 class="title">YOUTUBE</h2>
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita ullam aliquid non eligendi, nemo est neque reiciendis error?</p>
+      <button class="button">READ MORE</button>
+    </div>
+  </div>
+</body>
+</html>
